@@ -18,3 +18,8 @@ set softtabstop=2
 
 set wildmode=longest,list,full
 set wildmenu
+
+set hlsearch
+set incsearch
+
+highlight Search ctermbg=Yellow
