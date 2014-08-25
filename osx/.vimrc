@@ -14,14 +14,17 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'nvie/vim-flake8'
 
 call vundle#end()
 
 filetype on
 filetype plugin indent on
 
+" FileType specifics
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 expandtab
 autocmd FileType python map <buffer> <F5> :w<cr>:!python %<cr>
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " Key mappings
 " Map CTRL-s as save, independent of mode
@@ -80,3 +83,10 @@ hi StatusLine ctermbg=white ctermfg=blue
 
 " smart indent on/off
 set nosmartindent
+
+" git gutter colors
+highlight clear SignColumn
+highlight GitGutterAdd ctermfg=green guifg=darkgreen
+highlight GitGutterChange ctermfg=yellow guifg=darkyellow
+highlight GitGutterDelete ctermfg=red guifg=darkred
+highlight GitGutterChangeDelete ctermfg=yellow guifg=darkyellow
