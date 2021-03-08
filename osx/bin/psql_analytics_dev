@@ -1,3 +1,0 @@
-#!/bin/sh
-
-psql postgresql://cid_analytics@zefr-reporting-rebuild-repl-1.ckeznmcaa02t.us-east-1.redshift.amazonaws.com:5439/zefr
